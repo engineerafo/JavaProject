@@ -5,9 +5,15 @@
  */
 
 plugins {
-    id 'Demo1.java-library-conventions'
+    id 'Demo1.java-application-conventions'
 }
 
 dependencies {
-    api project(':list')
+    implementation 'org.apache.commons:commons-text'
+    implementation project(':utilities')
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'Demo1.app.App'
 }
